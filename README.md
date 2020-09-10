@@ -3,7 +3,8 @@ These two Jupyter Notebooks download Sentinel 2 sattelite images from DEFRA EO d
 
 # eods-api-generate-cloudless-mosaic.ipynb
 First run this Notebook which dowloads a list of all the Sentinel 2 images that are in the Area of interest difined within the Notebook. This is saved as two separate 
-cvs that are needed in the EODS_API Notebook.
+cvs that are needed in the EODS_API Notebook. Also the username and token proved by the DEFRA EO website must be entered in the config.py script so the Notebook can use them
+to download the list of images. 
 
 # EODS_API.ipynb
 This Notebook dowloads the lsit og Sentinel 2 sattelite images using the two csv created in the previous Notebook. Additionally this Notebook will also create a mosaic of the downloaded images, mask them using a shapefiles and finally calculate the NDVI of the clipped image. 
