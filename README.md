@@ -1,3 +1,16 @@
+![Alt text](https://github.com/jncc/defra-eo-data-service-api/blob/master/CUU_Logos.png?raw=true "Optional Title")
+
+
+
+
+
+
+
+
+
+
+
+
 # defra-eo-data-service-api
 These two Jupyter Notebooks download Sentinel 2 satellite images from DEFRA EO data service.
 
@@ -35,4 +48,3 @@ $ jupyter notebook
 
 
 
-![Alt text](https://github.com/jncc/defra-eo-data-service-api/blob/master/CUU_Logos.png?raw=true "Optional Title")
