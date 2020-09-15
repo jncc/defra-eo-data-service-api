@@ -15,22 +15,14 @@ These Jupyter Notebooks were created to demonstrate how to access Sentinel-2 ana
 
 
 
-# defra-eo-data-service-api
-These two Jupyter Notebooks download Sentinel 2 satellite images from DEFRA EO data service.
 
 
 # eods-api-generate-cloudless-mosaic.ipynb
-This Notebook was produced by SCISYS (now part of CGI)(https://www.cgi-group.co.uk/en-gb) on behalf of JNCC and Defra.
+This Notebook was produced by SCISYS (now part of [CGI](https://www.cgi-group.co.uk/en-gb)) on behalf of JNCC and Defra.
 First run this Notebook which downloads a list of the Sentinel-2 images with the least cloud cover for the date range and area of interest defined within the Notebook. These lists are saved as two csv files that are used in the EODS_API Notebook. Please note that your username and authentication token for the Defra EO Data Service must be entered in the config.py script so the Notebook can use them to download the list of images. 
 
-# EODS_API.ipynb
-This Notebook was produced by JNCC with funding from the Caroline Herschel Framework Partnership Agreement on Copernicus User Uptake (https://jncc.gov.uk/our-work/copernicus-project/). 
-This Notebook downloads the list of Sentinel-2 satellite images using the two csv created in the previous Notebook. Additionally, this Notebook will also create a mosaic of the downloaded images, clip them using a shapefile and finally calculate the NDVI of the clipped image. 
-
-For this notebook to work correctly the RSGISLib library package, (https://www.rsgislib.org/) for Jupyter Notebook is needed. 
-
-
-For the next two notebooks to work correctly the RSGISLIB library package, (https://www.rsgislib.org/) for Jupyter Notebook is needed. 
+# Installing RSGISLib
+For the next two notebooks to work correctly the [RSGISLib](https://www.rsgislib.org/) library package for Jupyter Notebook is needed. 
 
 To make a conda install of this follow the instructions below:
 
@@ -48,14 +40,14 @@ $ conda activate rsgislibenv
 
 $ jupyter notebook
 
-
 # EODS_API.ipynb
-This Notebook downloads the list of Sentinel 2 satellite images using the two csv created in the previous Notebook. Additionally, this Notebook will also create a mosaic of the downloaded images, mask them using a shapefile and finally calculate the NDVI of the clipped image. 
+This Notebook was produced by JNCC with funding from the Caroline Herschel Framework Partnership Agreement on [Copernicus User Uptake](https://jncc.gov.uk/our-work/copernicus-project/). 
+This Notebook downloads Sentinel-2 satellite images using the two csv files created in the previous Notebook. Additionally, this Notebook will also create a mosaic of the downloaded images, clip them using a shapefile and finally calculate the NDVI of the clipped image. 
 
 
 # EODS_API_Best_pixel.ipynb
-
-This notebook also downloads the list of Sentinel 2 satellite images using the two csv created in the eods-api-generate-cloudless-mosaic.ipynb. This Notebook however will create a mosaic that uses the same granule to create a cloudless satellite image using different timestamps of the same granule.
+This Notebook was produced by JNCC with funding from the Caroline Herschel Framework Partnership Agreement on [Copernicus User Uptake](https://jncc.gov.uk/our-work/copernicus-project/). 
+This Notebook downloads Sentinel-2 satellite images using the two csv files created in the eods-api-generate-cloudless-mosaic.ipynb. It then creates a best-pixel composite using the pixels with the lowest cloud cover in a stack of imagery from different dates.
 
 
 
